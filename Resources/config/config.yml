@@ -1,0 +1,6 @@
+# BcPageData Option Settings
+brookinsconsulting_page_data_persistence_options:
+    # Variable display_debug is used to control debug output
+    display_debug: false
+    # Variable display_debug_level could be used to control level of debug output. Currently not used
+    display_debug_level: 0

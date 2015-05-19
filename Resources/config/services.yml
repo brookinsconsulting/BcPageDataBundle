@@ -1,0 +1,18 @@
+services:
+    brookinsconsulting.page_data_persistence:
+        class: %brookinsconsulting.page_data_persistence.class%
+        scope: container
+        arguments:
+            - "@service_container"
+            - [ "%page_data.config%" ]
+        tags:
+            -  { name: brookinsconsulting.page_data_persistence }
+    brookinsconsulting.twig.page_data:
+        class: %brookinsconsulting.twig.page_data.class%
+        arguments:
+            - "@service_container"
+        tags:
+            -  { name: twig.extension }
+parameters:
+    brookinsconsulting.page_data_persistence.class: BrookinsConsulting\BcPageDataBundle\Services\BcPageDataPersistence
+    brookinsconsulting.twig.page_data.class: BrookinsConsulting\BcPageDataBundle\Twig\BcPageDataTwigExtension

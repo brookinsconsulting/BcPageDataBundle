@@ -1,0 +1,25 @@
+{
+    "name": "brookinsconsulting/bcpagedatabundle",
+    "description": "BC Page Data bundle for eZ Publish Platform. Provides a symfony based replacement for the eZ Publish Legacy ezpagedata operator's persistent storage.",
+    "type" : "library",
+    "keywords" : [ "eZ Publish", "eZ Platform", "bundle", "page data request persistent storage service solution" ],
+    "homepage": "https://bitbucket.org/brookinsconsulting/bcpagedatabundle",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name" : "Brookins Consulting",
+            "email": "info@brookinsconsulting.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.0.0",
+        "ezsystems/ezpublish-kernel": "@dev"
+    },
+    "autoload" : {
+        "psr-0" : {
+            "BrookinsConsulting\\BcPageDataBundle" : ""
+        }
+    },
+    "target-dir" : "BrookinsConsulting/BcPageDataBundle"
+}
