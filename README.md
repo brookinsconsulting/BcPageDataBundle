@@ -55,11 +55,13 @@ Requirements
 
 The following requirements exists for using BC Page Data extension:
 
+
 ### eZ Publish version
 
 * Make sure you use eZ Publish version 5.x (required) or higher.
 
 * Designed and tested with eZ Publish Community Project 2013.11
+
 
 ### PHP version
 
@@ -69,11 +71,17 @@ The following requirements exists for using BC Page Data extension:
 Features
 ========
 
+### Dependencies
+
+* This solution does not depend on eZ Publish Legacy in any way
+
+
 ### Twig operators
 
 This solution provides the following twig filter.
 
 * Twig Filter: `bc_pagedata` - Used within template overrides to access variable content from the persistent (page data) service.
+
 
 ### Services
 
@@ -88,6 +96,7 @@ Installation
 Run the following command from your project root to install the bundle:
 
     bash$ composer require brookinsconsulting/bcpagedatabundle dev-master;
+
 
 ### Bundle Activation
 
@@ -105,6 +114,7 @@ Within file `ezpublish/EzPublishKernel.php` method `registerBundles` add the fol
 Clear eZ Publish Platform / eZ platfrom caches (Required).
 
     php ezpublish/console cache:clear;
+
 
 Usage
 =====
@@ -127,12 +137,14 @@ You can use the `brookinsconsulting.page_data_persistence` service within your o
         $this->documentReaders = $this->pageDataPersistence->get( 'document_readers' );
     }
 
+
 Troubleshooting
 ===============
 
 ### Read the FAQ
 
 Some problems are more common than others. The most common ones are listed in the the [doc/FAQ.md](doc/FAQ.md)
+
 
 ### Support
 
