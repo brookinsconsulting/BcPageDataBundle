@@ -46,20 +46,24 @@ class BcPageDataPersistence
         $this->options = $options[0];
         $this->displayDebug = $this->options['display_debug'] === true ? true : false;
 
-        if( !isset( $this->parameters ) )
+        if ( !isset( $this->parameters ) )
         {
-            $this->parameters = new ParameterBag\ParameterBag( array(
-                'bc_page_data_serivce_timestamp' => $this->udate('l jS \of F Y h:i:s:u A')
-            ) );
+            $this->parameters = new ParameterBag\ParameterBag(
+                array(
+                    'bc_page_data_serivce_timestamp' => $this->udate( 'l jS \of F Y h:i:s:u A' )
+                )
+            );
         }
-        else if( isset( $this->parameters ) )
+        else if ( isset( $this->parameters ) )
         {
-            $this->parameters->set( array(
-                'bc_page_data_serivce_timestamp' => $this->udate('l jS \of F Y h:i:s:u A')
-            ) );
+            $this->parameters->set(
+                array(
+                    'bc_page_data_serivce_timestamp' => $this->udate( 'l jS \of F Y h:i:s:u A' )
+                )
+            );
         }
 
-        if( $this->displayDebug )
+        if ( $this->displayDebug )
         {
             echo "<span style='color:000000;'>BcPageDataPersistence : __construct:</span><br />\n";
             var_dump( $this->parameters() );
@@ -73,7 +77,7 @@ class BcPageDataPersistence
      */
     public function parameters()
     {
-        if( $this->displayDebug )
+        if ( $this->displayDebug )
         {
             echo "<span style='color:000000;'>BcPageDataPersistence : parameters method:</span><br />\n";
         }

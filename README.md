@@ -125,9 +125,9 @@ You can use the twig filter `bc_pagedata` within your own twig templates to acce
 
 You can use the `brookinsconsulting.page_data_persistence` service within your own custom PHP code to get persistent storage variables or add variables into the persistent storage.
 
-    $pageDataPersistence = $this->container->get('brookinsconsulting.page_data_persistence');
+    $pageDataPersistence = $this->container->get( 'brookinsconsulting.page_data_persistence' );
     // Access persistent storage
-    if( $this->pageDataPersistence->has( 'document_readers' ) )
+    if ( $this->pageDataPersistence->has( 'document_readers' ) )
     {
         $this->documentReaders = $this->pageDataPersistence->get( 'document_readers' );
     }

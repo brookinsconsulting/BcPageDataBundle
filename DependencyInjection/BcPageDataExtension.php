@@ -31,8 +31,11 @@ class BcPageDataExtension extends Extension
      * @param Array $configurations
      * @param ContainerBuilder $container
      */
-    public function load(array $configurations, ContainerBuilder $container)
+    public function load( array $configurations, ContainerBuilder $container )
     {
+        // param $configurations (for BC) has always been an empty array so we do this only to silence ezcs warnings for not used constructor variable
+        $notUsed = $configurations;
+
         $loader = new Loader\YamlFileLoader(
             $container,
             new FileLocator( __DIR__ . '/../Resources/config' )
@@ -43,7 +46,7 @@ class BcPageDataExtension extends Extension
         $configuration = new BcPageDataConfiguration();
 
         $container->setParameter(
-            'page_data.config', $this->processConfiguration( $configuration, Yaml::parse(__DIR__ . '/../Resources/config/config.yml') )
+            'page_data.config', $this->processConfiguration( $configuration, Yaml::parse( __DIR__ . '/../Resources/config/config.yml' ) )
         );
     }
 

@@ -33,7 +33,7 @@ class BcPageDataTwigExtension extends Twig_Extension
     public function __construct( ContainerInterface $container )
     {
         $this->container = $container;
-        $this->pageDataPersistence = $this->container->get('brookinsconsulting.page_data_persistence');
+        $this->pageDataPersistence = $this->container->get( 'brookinsconsulting.page_data_persistence' );
     }
 
     /**
